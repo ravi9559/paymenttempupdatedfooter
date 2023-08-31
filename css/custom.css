@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: #111F2C;
+  color: white;
+  padding: 10px 0;
+}
+footer {
+  background-color: #111F2C;
+  color: #fff;
+  font-size:16px;
+  padding: 20px 0;
+ 
+}
+.fcta {
+  background-color: #0062ff;
+  color: white;
+  border-radius: 5px;
+  
+  font-size: 16px;
+    padding: 10px 30px
+}
+
+.fcta:hover {
+  background-color: #3994F5;
+  color: white;
+  border-radius: 5px;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #59718B;
+}
+
+footer i{
+  color: #F15131;
+}
+
+footer h3{
+  color:#3994F5;
+}
+
+footer img{
+  width: 60%;
+}
+.icon {
+  width: 25px;
+}
+
+form{
+    width: 800px;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+
+
+.payment-option.selected {
+    background-color: #343a40;
+    color: white;
+    border-color: #343a40;
+  }
+
+.c-container{
+    background-color: #3571ca;
+    width: 850px;
+}
+  

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.84.0" />
+    <title>Payment Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    
+  </head>
+  <body class="d-flex flex-column h-100">
+    
+
+    <header>
+      <div b-rmf9o54liu class="container text-start py-3">
+          <div b-rmf9o54liu class="row">
+              <div b-rmf9o54liu class="col-md-3 pt-3 ">
+                  <img src="img/SM_Horizontal_reverse-1024x143.png" alt="Shopa Marketing Logo" class="img-thumbnail bg-transparent border-0 " />
+              </div>
+              <div b-rmf9o54liu class="col-md-6 text-start">
+                  <h2 b-rmf9o54liu class="container text-center pt-3 display-5">Checkout</h2>
+              </div>
+          </div>
+      </div>
+  </header>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+      <div class="container mt-5">
+        <!-- Client Information -->
+        <div class="text-center">
+          <h2>Client Details</h2>
+        </div>
+        <div class="text-center">
+          <table class="table table-borderless mt-3">
+            <thead>
+              <tr>
+                <th scope="col">Client Name</th>
+                <th scope="col">Rep Name</th>
+                <th scope="col">Contract Number</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider" id="client-info"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="april-cont" class="mt-4">
+        <!-- Add April payment gateway integration here -->
+
+        <h3 class="text-center">Payment Information</h3>
+        <div class="d-flex justify-content-center">
+          <form class="needs-validation mb-5" novalidate>
+            <div class="my-3">
+              <div
+                class="d-flex py-2 px-3 align-items-center border rounded payment-option"
+              >
+                <label class="form-check-label me-auto" for="full"
+                  >Pay $2,200.00 today <br /><small>Pay Now in full</small>
+                </label>
+
+                <div class="form-check">
+                  <input
+                    id="full"
+                    name="paymentMethod"
+                    type="radio"
+                    class="form-check-input"
+                    checked
+                    required
+                  />
+                </div>
+              </div>
+
+              <div
+                class="d-flex py-2 px-3 align-items-center rounded mt-2 border payment-option"
+              >
+                <label class="form-check-label me-auto" for="paylater"
+                  >Pay $2,200.00 today <br /><small class=""
+                    >By Now Pay Later</small
+                  >
+                </label>
+
+                <div class="form-check">
+                  <input
+                    id="paylater"
+                    name="paymentMethod"
+                    type="radio"
+                    class="form-check-input custom-radio"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row gy-3 mb-3">
+              <div class="col">
+                <label for="cc-name" class="form-label">Payment Source</label>
+                <button class="w-100 btn btn-dark btn-lg" type="button">
+                  <img
+                    src="https://img.icons8.com/color/24/000000/google-logo.png"
+                  />
+                  Pay
+                </button>
+              </div>
+            </div>
+
+            <div class="row gy-3">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      <i class="fa fa-check-circle pe-2" aria-hidden="true">
+                      </i>
+                      visa **** **** **** 1234
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <div class="row gy-3">
+                        <div class="col">
+                          <label for="cc-cvv" class="form-label"
+                            ><strong>Security Number</strong></label
+                          >
+                          <div class="d-flex align-items-center">
+                            <input
+                              type="text"
+                              class="form-control w-25 me-3"
+                              id="cc-cvv"
+                              placeholder=""
+                              required
+                            />
+                            <i
+                              class="fa fa-credit-card pe-3"
+                              aria-hidden="true"
+                            ></i>
+
+                            <small class="text-muted">
+                              The 3 digit number on the back of your card</small
+                            >
+                          </div>
+                          <div class="invalid-feedback">
+                            Security code required
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      <i class="fa fa-credit-card pe-3" aria-hidden="true"></i
+                      >Credit/Debit Card<img
+                        src="img/visa.svg"
+                        class="icon ms-3"
+                      />
+                      <img class="icon" src="img/mastercard.svg" />
+                    </button>
+                  </h2>
+
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <div class="row gy-3">
+                        <div class="col-md-6">
+                          <label for="cc-name" class="form-label"
+                            >Name on card</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cc-name"
+                            placeholder=""
+                            required
+                          />
+                          <small class="text-muted"
+                            >Full name as displayed on card</small
+                          >
+                          <div class="invalid-feedback">
+                            Name on card is required
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="cc-number" class="form-label"
+                            >Credit card number</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cc-number"
+                            placeholder=""
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Credit card number is required
+                          </div>
+                        </div>
+
+                        <div class="col-md-3">
+                          <label for="cc-expiration" class="form-label"
+                            >Expiration</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cc-expiration"
+                            placeholder=""
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Expiration date required
+                          </div>
+                        </div>
+
+                        <div class="col-md-3">
+                          <label for="cc-cvv" class="form-label">CVV</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cc-cvv"
+                            placeholder=""
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Security code required
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-4" />
+
+            <button class="w-100 btn btn-primary btn-lg mb-2" type="submit">
+              Complete purchase
+            </button>
+            <small class="text-muted"
+              >This payment will be processed by Aprill Solutions. To learn
+              more, see Term of Use
+              <a
+                href="https://meetapril.com/merchant-terms/"
+                class="text-decoration-none"
+                >here</a
+              ></small
+            >
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer mt-auto">
+      <div class="container-sm px-md-5 ">
+        <div class="row mx-auto pt-5 px-md-5 mx-md-5">
+          <div class="col-md-4 pe-md-5 mb-4 mb-md-0 ">
+            <img
+              src="img/SM_Horizontal_reverse-1024x143.png"
+              alt="Company Logo"
+              class="img-thumbnail bg-transparent border-0  mx-auto"
+            />
+            <p class="py-3 pe-5">
+              From SEO sorcery to Google Ads wizardry, web design that’ll make
+              your competitors envious, and YouTube Ads that steal the
+              spotlight, we’ve got it all. It’s not just services; it’s a
+              digital extravaganza.
+            </p>
+            <div>
+              <a
+                class="btn fcta  mb-3 "
+                href="https://www.shopamarketing.com/contact/"
+                role="button"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-2 mb-4 mb-md-0 ">
+            <h4 class="fw-semibold">Company</h4>
+            <ul class="list-group list-unstyled">
+              <li class="list-group-item-transparent pt-2">
+                <a
+                  class="text-decoration-none"
+                  href="https://www.shopamarketing.com/services/"
+                  >Home</a
+                >
+              </li>
+              <li class="list-group-item-transparent pt-2">
+                <a
+                  class="text-decoration-none"
+                  href="https://www.shopamarketing.com/services/"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-2 mb-4 mb-md-0 ">
+            <h4 class="fw-semibold">Services</h4>
+            <ul class="list-group list-unstyled">
+              <li class="list-group-item-transparent pt-2">
+                <a
+                  class="text-decoration-none"
+                  href="https://www.shopamarketing.com/services/"
+                  >Social Media</a
+                >
+              </li>
+              <li class="list-group-item-transparent pt-2">
+                <a
+                  class="text-decoration-none"
+                  href="https://www.shopamarketing.com/services/"
+                  >Website</a
+                >
+              </li>
+              <li class="list-group-item-transparent pt-2">
+                <a
+                  class="text-decoration-none"
+                  href="https://www.shopamarketing.com/services/"
+                  >SEO</a
+                >
+              </li>
+              <li class="list-group-item-transparent pt-2">
+                <a
+                  class="text-decoration-none"
+                  href="https://www.shopamarketing.com/services/"
+                  >Google Adwords</a
+                >
+              </li>
+              <li class="list-group-item-transparent pt-2">
+                <a
+                  class="text-decoration-none"
+                  href="https://www.shopamarketing.com/services/"
+                  >Graphic Design</a
+                >
+              </li>
+              <li class="list-group-item-transparent pt-2">
+                <a
+                  class="text-decoration-none"
+                  href="https://www.shopamarketing.com/services/"
+                  >Blogs</a
+                >
+              </li>
+              <li class="list-group-item-transparent pt-2">
+                <a
+                  class="text-decoration-none"
+                  href="https://www.shopamarketing.com/services/"
+                  >Email Campaigns</a
+                >
+              </li>
+              <li class="list-group-item-transparent pt-2">
+                <a
+                  class="text-decoration-none"
+                  href="https://www.shopamarketing.com/services/"
+                  >SMS Marketing</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 ">
+            <h4 class="fw-semibold ">Office Locations</h4>
+            <div class="d-flex">
+              <span class="fs-5 me-3 pt-1">
+                <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+              </span>
+              <div>
+                <h3 class="fs-5 fw-semibold mb-0">Shopa Marketing LLC - UAE</h3>
+                <p class="description">
+                  Sharjah Media City, Al Messaned Sharjah
+                </p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <span class="fs-5 me-3 pt-1">
+                <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+              </span>
+              <div>
+                <h3 class="fs-5 fw-semibold mb-0">
+                  Shopa Marketing Australia Pty Ltd
+                </h3>
+                <p class="description">
+                  Level 4, 80 Market Street South Melbourne 3205
+                </p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <span class="fs-5 me-3 pt-1">
+                <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+              </span>
+              <div>
+                <h3 class="fs-5 fw-semibold mb-0">Shopa Marketing USA LLC</h3>
+                <p class="description">
+                  28 Church Street Set 14 #4698, Winchester Massachusetts 01890
+                  US
+                </p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <span class="fs-5 me-3 pt-1">
+                <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+              </span>
+              <div>
+                <h3 class="fs-5 fw-semibold mb-0">Shopa Marketing UK LTD</h3>
+                <p class="description">
+                  20 Wenlock Road<br />
+                  London N1 7GU
+                </p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <span class="fs-5 me-3 pt-1">
+                <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+              </span>
+              <div>
+                <h3 class="fs-5 fw-semibold mb-0">Shopa Marketing India</h3>
+                <p class="description">
+                  11th Floor, Sigma Soft Tech Park<br />
+                  Bengaluru,Karnataka, India 560066
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 text-center">
+            <p class="mt-4">
+              © <span id="currentyear"></span> Shopa Marketing. All rights
+              reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
